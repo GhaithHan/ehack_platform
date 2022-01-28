@@ -186,7 +186,7 @@ exports.update = (req, res) => {
             // remove the existing image from s3 before uploading new/updated one
             const deleteParams = {
                 Bucket: 'ehackghaith',
-                Key: `category/${updated.image.key}`
+                Key: `${updated.image.key}`
             };
 
             s3.deleteObject(deleteParams, function(err, data) {
@@ -197,7 +197,7 @@ exports.update = (req, res) => {
             // handle upload image
             const params = {
                 Bucket: 'ehackghaith',
-                Key: `category/${uuidv4()}.${type}`,
+                Key: `${uuidv4()}.${type}`,
                 Body: base64Data,
                 ACL: 'public-read',
                 ContentEncoding: 'base64',
@@ -240,7 +240,7 @@ exports.remove = (req, res) => {
         // remove the existing image from s3 before uploading new/updated one
         const deleteParams = {
             Bucket: 'ehackghaith',
-            Key: `category/${data.image.key}`
+            Key: `${data.image.key}`
         };
 
         s3.deleteObject(deleteParams, function(err, data) {
