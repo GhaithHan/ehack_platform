@@ -2,7 +2,7 @@
 import Layout from '../../components/Layout';
 import withUser from '../withUser';
 
-const User = ({user, token}) => <Layout>{JSON.stringify(token)}</Layout>;
+const User = ({user, token, userLinks}) => <Layout>{JSON.stringify(userLinks)}</Layout>;
 
  
 
