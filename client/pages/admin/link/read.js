@@ -68,7 +68,7 @@ const Links = ({ token, links, totalLinks, linksLimit, linkSkip }) => {
                     ))}
 
                     <span onClick={(e) => confirmDelete(e, l._id)} className="text-danger pull-right">Delete</span>
-                    <Link href={`/admin/link/${l._id}`}>
+                    <Link href={`/user/link/${l._id}`}>
                         <a><span className="badge text-warning pull-right">Update</span></a>
                     </Link>
                 </div>
