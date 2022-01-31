@@ -13,7 +13,7 @@ const { create, list, read, update, remove, clickCount, popular, popularInCatego
 router.post('/link', linkCreateValidator, runValidation, requireSignin, authMiddleware, create);
 router.post('/links', requireSignin, adminMiddleware, list);
 router.put('/click-count', clickCount);
-router.get('/links/popular', popular);
+router.get('/link/popular', popular);
 router.get('/links/popular/:slug', popularInCategory);
 router.get('/link/:id', read);
 router.put('/link/:id', linkUpdateValidator, runValidation, requireSignin, authMiddleware, canUpdateDeleteLink, update);
